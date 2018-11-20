@@ -12,20 +12,31 @@ public class DragonFight {
 		
 		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
 		// 2. Create a variable called "playerHealth" to store your health (set it equal to 100)
+		 int playerHealth = 100;
+		
 	
 		// 3. Create a variable called "dragonHealth" to store the dragon's health (set it equal to 100)
+		 int dragonHealth = 100;
 		
 		// 4. Create a variable to hold the damage the player's attack does each round
+		 int playerAttack = 0;
 		
 		// 5. Create a variable to hold the damage the dragon's attack does each round
+		 int dragonAttack;
 		
 		
 		// 6.  Delete the slashes at the beginning of the next line.  
-		//while(playerHealth>0 && dragonHealth>0) {    //this line of code keeps the battle going until someone's health reaches 0 
+		while(playerHealth>0 && dragonHealth>0) {    
+			
+			String attack;
+			attack = JOptionPane.showInputDialog("Would you like to yell at or kick the dragon?");
+			
 		
 		// 7. Add a closing mustache at the very bottom of this program (since we just added an opening mustache on the previous step).
 		
 		// 8. Ask the player in a pop-up if they want to attack the dragon with a yell or a kick
+			
+			
 		
 		// 9. If they typed in "yell":
 		
@@ -39,6 +50,17 @@ public class DragonFight {
 			
 			//-- Subtract that number from the dragon's health variable
 			
+			if (attack.equalsIgnoreCase("yell")) {
+				playerAttack = new Random().nextInt(11);
+				dragonHealth = dragonHealth - playerAttack;
+			}
+			if (attack.equalsIgnoreCase("kick")) {
+				playerAttack = new Random().nextInt(26);
+				dragonHealth = dragonHealth - playerAttack;
+			}
+			dragonAttack = new Random().nextInt(36);
+			playerHealth = playerHealth - dragonAttack;
+		
 			
 		
 		// 11.  Find a random number between 0 and 35 and store it in playerDamage
@@ -59,7 +81,18 @@ public class DragonFight {
 	   //  15.  Else
 			
 			//-- Pop up a message that tells the their current health and the dragon's currently health (Bonus: Also display the amount of health that was lost for each player this round)
-			
+			if (playerHealth < 1) {
+				JOptionPane.showMessageDialog(null, "The dragon defeated you. You lost.");
+			}
+			else if (dragonHealth < 1) {
+				JOptionPane.showMessageDialog(null, "You won! You defeated the dragon and took a ton of gold.");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Your health is at " + playerHealth + ". The dragon's health is at " + dragonHealth + ".");
+				JOptionPane.showMessageDialog(null, "You dealt " + playerAttack + " damage to the dragon. The dragon dealt " + dragonAttack + " damage to you.");
+			}
+		
+		}
 		}
 	}
 

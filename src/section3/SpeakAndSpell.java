@@ -17,6 +17,55 @@ public class SpeakAndSpell {
 		// 4. Otherwise say "wrong"
 
 		// 5. repeat the process for other words
+		String one = "Millennium";
+		String two = "pharaoh";
+		String three = "ecstasy";
+		String four = "accommodate";
+		String five = "cemetery";
+		
+		String answer;
+		
+		speak("spell " + one);
+		answer = JOptionPane.showInputDialog(" ");
+		if (answer.equalsIgnoreCase(one)) {
+			JOptionPane.showMessageDialog(null, "correct!");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "wrong.");
+		}
+		speak("spell " + two);
+		answer = JOptionPane.showInputDialog(" ");
+		if (answer.equalsIgnoreCase(two)) {
+			JOptionPane.showMessageDialog(null, "correct!");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "wrong.");
+		}
+		speak("spell " + three);
+		answer = JOptionPane.showInputDialog(" ");
+		if (answer.equalsIgnoreCase(three)) {
+			JOptionPane.showMessageDialog(null, "correct!");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "wrong.");
+		}
+		speak("spell " + four);
+		answer = JOptionPane.showInputDialog(" ");
+		if (answer.equalsIgnoreCase(four)) {
+			JOptionPane.showMessageDialog(null, "correct!");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "wrong.");
+		}
+		speak("spell " + five);
+		answer = JOptionPane.showInputDialog(" ");
+		if (answer.equalsIgnoreCase(five)) {
+			JOptionPane.showMessageDialog(null, "correct!");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "wrong.");
+		}
+		
 		
 	}
 

@@ -38,7 +38,7 @@ public class PentagonCrazy {
 			// 11. Turn the robot one more degree
 
 				for (int i=0; i<200; i++) {
-					r.move(i);
+					r.move(i*2);
 					r.turn(angle+1);
 					
 					
